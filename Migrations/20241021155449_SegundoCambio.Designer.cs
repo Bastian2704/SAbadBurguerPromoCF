@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SAbadBurguerPromoCF.Data;
 
@@ -11,9 +12,11 @@ using SAbadBurguerPromoCF.Data;
 namespace SAbadBurguerPromoCF.Migrations
 {
     [DbContext(typeof(SAbadBurguerPromoCFContext))]
-    partial class SAbadBurguerPromoCFContextModelSnapshot : ModelSnapshot
+    [Migration("20241021155449_SegundoCambio")]
+    partial class SegundoCambio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
