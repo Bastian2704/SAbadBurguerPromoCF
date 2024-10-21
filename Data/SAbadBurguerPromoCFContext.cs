@@ -15,5 +15,6 @@ namespace SAbadBurguerPromoCF.Data
         }
 
         public DbSet<SAbadBurguerPromoCF.Models.Burguer> Burguer { get; set; } = default!;
+        public DbSet<SAbadBurguerPromoCF.Models.Promo> Promo { get; set; } = default!;
     }
 }
