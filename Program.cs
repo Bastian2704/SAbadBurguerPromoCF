@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SAbadBurguerPromoCF.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SAbadBurguerPromoCFContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SAbadBurguerPromoCFContext") ?? throw new InvalidOperationException("Connection string 'SAbadBurguerPromoCFContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
